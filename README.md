@@ -4,7 +4,7 @@ shellscript-kotobackup
 これは何?
 ----------
 
-これは Koto をバックアップするためのシェルスクリプトです。
+これは Koto のウォレットをバックアップするためのシェルスクリプトです。
 これを実行すると、~/KotoBackup/年月日-時分秒/ にバックアップファイルが保存されます。
 
 どう使うの?
@@ -23,7 +23,7 @@ shellscript-kotobackup
 注意
 ----------
 
-Kotod を停止した状態で実行してください。
+kotod を停止した状態で実行してください。
 
 ライセンス
 ---------
@@ -34,7 +34,7 @@ Kotod を停止した状態で実行してください。
 What is this?
 ----------
 
-This is a shell script for backing up Koto.
+This is a shell script for backing up Koto wallet.
 When you run this, backup files are saved in ~/KotoBackup/YearMonthDay-HourMinuteSecond/.
 
 How to Use?
