@@ -5,17 +5,27 @@
 # file LICENSE or http://www.opensource.org/licenses/mit-license.php.
 
 set -e
+trap catch ERR
+function catch {
+  echo "Error"
+}
 
+KotoPath=$(cd $(dirname $0) ; pwd)
 DateAndTime=$(date +%Y)$(date +%m)$(date +%d)-$(date +%H)$(date +%M)$(date +%S)
+
 mkdir -p ~/KotoBackup/$DateAndTime/
 cd ~/KotoBackup/$DateAndTime/
 
-cp ~/.koto/wallet.dat ./wallet.dat
+if [ "$(uname)" = 'Darwin' ] ; then
+  cp /Library/Application\ Support/Koto/wallet.dat ./wallet.dat
+else
+  cp ~/.koto/wallet.dat ./wallet.dat
+fi
 
-~/koto/src/kotod -exportdir=./ -daemon
+$KotoPath/kotod -exportdir=./ -daemon
 while :
 do
-  ~/koto/src/koto-cli help >/dev/null 2>&1 && true
+  $KotoPath/koto-cli help >/dev/null 2>&1 && true
   if [ $? = 0 ] ; then
     break
   else
@@ -24,8 +34,8 @@ do
   fi
 done
 
-~/koto/src/koto-cli backupwallet backup
-~/koto/src/koto-cli dumpwallet dump
-~/koto/src/koto-cli z_exportwallet zexport
-~/koto/src/koto-cli stop
+$KotoPath/koto-cli backupwallet backup
+$KotoPath/koto-cli dumpwallet dump
+$KotoPath/koto-cli z_exportwallet zexport
+$KotoPath/koto-cli stop
 
