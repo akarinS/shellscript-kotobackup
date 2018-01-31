@@ -17,7 +17,7 @@ mkdir -p ~/KotoBackup/$DateAndTime/
 cd ~/KotoBackup/$DateAndTime/
 
 if [ "$(uname)" = 'Darwin' ] ; then
-  cp /Library/Application\ Support/Koto/wallet.dat ./wallet.dat
+  cp ~/Library/Application\ Support/Koto/wallet.dat ./wallet.dat
 else
   cp ~/.koto/wallet.dat ./wallet.dat
 fi
