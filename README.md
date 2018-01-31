@@ -47,7 +47,7 @@ How to Use?
     git clone https://github.com/akarinS/shellscript-kotobackup
     chmod u+x shellscript-kotobackup/kotobackup.sh
 
-Copy to the same place as kotod and koto-cli. And run kotobackup.sh
+Copy to the same place as kotod and koto-cli. And run kotobackup.sh  
 Ubuntu exsample
 
     cp shellscript-kotobackup/kotobackup.sh ./koto/src/kotobackup.sh
