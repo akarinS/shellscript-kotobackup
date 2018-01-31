@@ -10,15 +10,19 @@ shellscript-kotobackup
 どう使うの?
 ----------
 
-準備
-
     git clone https://github.com/akarinS/shellscript-kotobackup
-    cd shellscript-kotobackup
-    chmod u+x kotobackup.sh
+    chmod u+x shellscript-kotobackup/kotobackup.sh
 
-実行
+kotod koto-cli と同じ場所へコピーして kotobackup.sh を実行してください。  
+Ubuntuの例
 
-    ./kotobackup.sh
+    cp shellscript-kotobackup/kotobackup.sh ./koto/src/kotobackup.sh
+    ./koto/src/kotobackup.sh
+
+Macの例
+
+    cp shellscript-kotobackup/kotobackup.sh ./koto/171228_koto1.0.13_mac_64bit/kotobackup.sh
+    ./koto/171228_koto1.0.13_mac_64bit/kotobackup.sh
 
 注意
 ----------
@@ -40,15 +44,19 @@ When you run this, backup files are saved in ~/KotoBackup/YearMonthDay-HourMinut
 How to Use?
 ----------
 
-Preparation
-
     git clone https://github.com/akarinS/shellscript-kotobackup
-    cd shellscript-kotobackup
-    chmod u+x kotobackup.sh
+    chmod u+x shellscript-kotobackup/kotobackup.sh
 
-Run
+Copy to the same place as kotod and koto-cli. And run kotobackup.sh
+Ubuntu exsample
 
-    ./kotobackup.sh
+    cp shellscript-kotobackup/kotobackup.sh ./koto/src/kotobackup.sh
+    ./koto/src/kotobackup.sh
+
+Mac exsample
+
+    cp shellscript-kotobackup/kotobackup.sh ./koto/171228_koto1.0.13_mac_64bit/kotobackup.sh
+    ./koto/171228_koto1.0.13_mac_64bit/kotobackup.sh
 
 Coution
 ----------
