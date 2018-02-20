@@ -66,4 +66,4 @@ Please run with kotod stopped.
 License
 ----------
 
-For license information see the file COPYING.
+For license information see the file LICENSE.
